@@ -29,8 +29,30 @@ if (!isset($_SESSION['usuario'])) {
         </nav>
     </header>
 
+    <?php
+    // Incluir la clase de conexión
+    include_once '../modelo/conexion.php';
+    // Crear una instancia de la conexión
+    $db = (new Conexion())->getConexion();
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cedula'])) {
+        // Obtener la cédula desde el formulario
+        $cedula = $_POST['cedula'];
+        // Redirigir a la página de generación de PDF
+        header("Location: generar_pdf.php?cedula=" . urlencode($cedula));
+        exit();
+    }
+    ?>
     <main>
-        <a class="success-button" href="agregar.php">Agregar Contacto</a>
+        <section id="center-contact-form">
+            <form method="POST" action="">
+                <label for="cedula">Ingrese la Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+                <button type="submit">Generar PDF</button>
+            </form>
+        </section> <br> <br>
+        <section>
+            <a class="success-button" href="agregar.php">Agregar Contacto</a>
+        </section>
         <section id="search-section">
             <input type="text" id="search" placeholder="Buscar contacto..." onkeyup="searchContacts()">
         </section>
