@@ -14,7 +14,7 @@
     <main>
         <section id="center-contact-form"> 
             <?php if (isset($_GET['error'])): ?>
-                <p style="color:red;"><?php echo htmlspecialchars($_GET['error']); ?></p>
+                <p style="color:azul;"><?php echo htmlspecialchars($_GET['error']); ?></p>
             <?php endif; ?>
             <form action="../controlador/usuarioscontroller.php" method="POST">
                 <input type="text" name="usuario" placeholder="Usuario" required>
