@@ -38,7 +38,7 @@ class ContactoController {
 
             // Implementa el método modificar en el modelo
             if ($this->contacto->modificar()) {
-                echo "<script>alert('Contacto modificado exitosamente.'); window.location.href='../vista/index.php';</script>";
+                echo "<script>alert('Contacto modificado exitosamente.'); window.location.href='../vista/contactos.php';</script>";
             } else {
                 echo "<script>alert('Error al modificar contacto.');</script>";
             }
@@ -51,7 +51,7 @@ class ContactoController {
 
             // Implementa el método eliminar en el modelo
             if ($this->contacto->eliminar()) {
-                echo "<script>alert('Contacto eliminado exitosamente.'); window.location.href='../vista/index.php';</script>";
+                echo "<script>alert('Contacto eliminado exitosamente.'); window.location.href='../vista/contactos.php';</script>";
             } else {
                 echo "<script>alert('Error al eliminar contacto.');</script>";
             }
