@@ -23,7 +23,7 @@ if (!isset($_SESSION['usuario'])) {
                 <li>
                     <span>Bienvenido, <?php echo htmlspecialchars($_SESSION['usuario']); ?></span>
                     <br> <br>
-                    <a href="../vista/logout.php" class="logout-button">Cerrar Sesión</a>
+                    <a href="logout.php" class="logout-button">Cerrar Sesión</a>
                 </li>
             </ul>
         </nav>

@@ -14,11 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($resultado) {
         $_SESSION['usuario'] = $resultado['usuario'];
-        header("Location: ../vista/contactos.php");
+        header("Location: contactos.php");
         exit;
     } else {
         $error = "Usuario o contraseña incorrectos.";
-        header("Location: ../index.php?error=" . urlencode($error));
+        header("Location: index.php?error=" . urlencode($error));
         exit;
     }
 }
