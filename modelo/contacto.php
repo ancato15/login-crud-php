@@ -15,7 +15,7 @@ class Contacto {
     }
 
     public function crear() {
-        $query = "INSERT INTO contacto VALUES cedula=:cedula, nombre=:nombre, apellido=:apellido, direccion=:direccion, celular=:celular";
+        $query = "INSERT INTO contacto (cedula, nombre, apellido, direccion, celular) VALUES (:cedula, :nombre, :apellido, :direccion, :celular)";
         $stmt = $this->conn->prepare($query);
 
         // Sanitizar
