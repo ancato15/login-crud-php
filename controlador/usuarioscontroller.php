@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     } else {
         $error = "Usuario o contraseña incorrectos.";
-        header("Location: ../vista/index.php?error=" . urlencode($error));
+        header("Location: ../index.php?error=" . urlencode($error));
         exit;
     }
 }
