@@ -11,7 +11,7 @@
         <h1>Modificar Contacto</h1>
         <nav>
             <ul>
-                <li><a href="index.php">Volver a la Lista</a></li>
+                <li><a href="contactos.php">Volver a la Lista</a></li>
             </ul>
         </nav>
     </header>
