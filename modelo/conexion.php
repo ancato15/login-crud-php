@@ -1,10 +1,19 @@
 <?php
 class Conexion {
-    private $host = 'localhost';
-    private $db_name = 'agenda';
-    private $username = 'root';
-    private $password = '12345678';
+    private $host;
+    private $db_name;
+    private $username;
+    private $password;
     public $conn;
+
+    public function __construct() {
+        // Asegurarse de que las variables de entorno están definidas
+        $this->host = isset($_ENV["DB_HOST"]) ? $_ENV["DB_HOST"] : 'localhost';
+        $this->db_name = isset($_ENV["DB_NAME"]) ? $_ENV["DB_NAME"] : 'agenda';
+        $this->username = isset($_ENV["DB_USER"]) ? $_ENV["DB_USER"] : 'root';
+        $this->password = isset($_ENV["DB_PASSWORD"]) ? $_ENV["DB_PASSWORD"] : '12345678';
+    }
+    
 
     public function getConexion() {
         $this->conn = null;
