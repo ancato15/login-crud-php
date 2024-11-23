@@ -10,7 +10,7 @@
     <header>
         <h1>Iniciar Sesión</h1>
     </header>
-
+    
     <main>
         <section id="center-contact-form"> 
             <?php if (isset($_GET['error'])): ?>
