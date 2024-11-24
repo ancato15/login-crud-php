@@ -8,10 +8,10 @@ class Conexion {
 
     public function __construct() {
         // Asegurarse de que las variables de entorno están definidas
-        $this->host = isset($_ENV["DB_HOST"]) ? $_ENV["DB_HOST"] : 'free.clusters.zeabur.com';
-        $this->db_name = isset($_ENV["DB_NAME"]) ? $_ENV["DB_NAME"] : 'zeabur';
+        $this->host = isset($_ENV["DB_HOST"]) ? $_ENV["DB_HOST"] : 'localhost';
+        $this->db_name = isset($_ENV["DB_NAME"]) ? $_ENV["DB_NAME"] : 'agenda';
         $this->username = isset($_ENV["DB_USER"]) ? $_ENV["DB_USER"] : 'root';
-        $this->password = isset($_ENV["DB_PASSWORD"]) ? $_ENV["DB_PASSWORD"] : 'VJKa50Ph1p467nY28EoqikM3sw9AZmtH';
+        $this->password = isset($_ENV["DB_PASSWORD"]) ? $_ENV["DB_PASSWORD"] : '12345678';
     }
     
 
